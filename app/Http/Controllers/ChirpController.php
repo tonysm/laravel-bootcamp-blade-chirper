@@ -32,7 +32,7 @@ class ChirpController extends Controller
     public function store(Request $request)
     {
         $request->user()->chirps()->create($request->validate([
-            'message' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string'],
         ]));
 
         return to_route('chirps.index');
@@ -66,7 +66,7 @@ class ChirpController extends Controller
         Gate::authorize('update', $chirp);
 
         $chirp->update($request->validate([
-            'message' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string'],
         ]));
 
         return to_route('chirps.index');
