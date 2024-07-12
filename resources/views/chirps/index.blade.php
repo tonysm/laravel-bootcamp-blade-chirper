@@ -7,6 +7,7 @@
                 name="content"
                 placeholder="{{ __('What\'s on your mind?') }}"
                 class="block w-full bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                :accept-files="true"
                 :value="old('content')"
             />
             <x-input-error :messages="$errors->get('content')" class="mt-2" />
