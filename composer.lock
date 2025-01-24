@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8dff50cd87971b67202b5d2f8cc95408",
+    "content-hash": "d37be70ca00bcfdc88d5b787a3d07c03",
     "packages": [
         {
             "name": "brick/math",
@@ -2006,6 +2006,73 @@
             "time": "2024-12-08T08:18:47+00:00"
         },
         {
+            "name": "masterminds/html5",
+            "version": "2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "f5ac2c0b0a2eefca70b2ce32a5809992227e75a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f5ac2c0b0a2eefca70b2ce32a5809992227e75a6",
+                "reference": "f5ac2c0b0a2eefca70b2ce32a5809992227e75a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/Masterminds/html5-php/issues",
+                "source": "https://github.com/Masterminds/html5-php/tree/2.9.0"
+            },
+            "time": "2024-03-31T07:05:07+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.8.1",
             "source": {
@@ -3299,6 +3366,66 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.18.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78",
+                "reference": "ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0|^9.0",
+                "pestphp/pest": "^1.22|^2",
+                "phpunit/phpunit": "^9.5.24|^10.5",
+                "spatie/pest-plugin-test-time": "^1.1|^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.18.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-22T08:51:18+00:00"
+        },
+        {
             "name": "symfony/clock",
             "version": "v7.2.0",
             "source": {
@@ -3891,6 +4018,75 @@
                 }
             ],
             "time": "2024-12-30T19:00:17+00:00"
+        },
+        {
+            "name": "symfony/html-sanitizer",
+            "version": "v7.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/html-sanitizer.git",
+                "reference": "f6bc679b024e30f27e33815930a5b8b304c79813"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/html-sanitizer/zipball/f6bc679b024e30f27e33815930a5b8b304c79813",
+                "reference": "f6bc679b024e30f27e33815930a5b8b304c79813",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "league/uri": "^6.5|^7.0",
+                "masterminds/html5": "^2.7.2",
+                "php": ">=8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HtmlSanitizer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Titouan Galopin",
+                    "email": "galopintitouan@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to sanitize untrusted HTML input for safe insertion into a document's DOM.",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "Purifier",
+                "html",
+                "sanitizer"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/html-sanitizer/tree/v7.2.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-12-30T18:35:15+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -5580,6 +5776,139 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
             },
             "time": "2024-12-21T16:25:41+00:00"
+        },
+        {
+            "name": "tonysm/globalid-laravel",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonysm/globalid-laravel.git",
+                "reference": "911a0219a91079ea5ea889b9e2cf71b0134938bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonysm/globalid-laravel/zipball/911a0219a91079ea5ea889b9e2cf71b0134938bf",
+                "reference": "911a0219a91079ea5ea889b9e2cf71b0134938bf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.47|^9.0|^10.0|^11.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^7.0|^8.1",
+                "orchestra/testbench": "^8.0|^9.0",
+                "phpunit/phpunit": "^10.5",
+                "vimeo/psalm": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "GlobalId": "Tonysm\\GlobalId\\GlobalIdFacade"
+                    },
+                    "providers": [
+                        "Tonysm\\GlobalId\\GlobalIdServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tonysm\\GlobalId\\": "src",
+                    "Tonysm\\GlobalId\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tony Messias",
+                    "email": "tonysm@hey.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Identify app models with a URI. Inspired by the globalid gem.",
+            "homepage": "https://github.com/tonysm/globalid-laravel",
+            "keywords": [
+                "globalid",
+                "globalid-laravel",
+                "laravel",
+                "tonysm"
+            ],
+            "support": {
+                "issues": "https://github.com/tonysm/globalid-laravel/issues",
+                "source": "https://github.com/tonysm/globalid-laravel/tree/1.2.0"
+            },
+            "time": "2024-03-08T01:14:02+00:00"
+        },
+        {
+            "name": "tonysm/rich-text-laravel",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonysm/rich-text-laravel.git",
+                "reference": "27792adce3413af3bcecb0e608e7879259d584e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonysm/rich-text-laravel/zipball/27792adce3413af3bcecb0e608e7879259d584e3",
+                "reference": "27792adce3413af3bcecb0e608e7879259d584e3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.9.2",
+                "tonysm/globalid-laravel": "^1.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10",
+                "livewire/livewire": "^3.4",
+                "nunomaduro/collision": "^6.0|^8.0",
+                "orchestra/testbench": "^8.21|^9.0",
+                "orchestra/workbench": "^8.0|^9.0",
+                "phpunit/phpunit": "^10.5",
+                "symfony/html-sanitizer": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tonysm\\RichTextLaravel\\RichTextLaravelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tonysm\\RichTextLaravel\\": "src",
+                    "Tonysm\\RichTextLaravel\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tony Messias",
+                    "email": "tonysm@hey.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integrates Trix content with Laravel",
+            "homepage": "https://github.com/tonysm/rich-text-laravel",
+            "keywords": [
+                "laravel",
+                "rich-text-laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/tonysm/rich-text-laravel/issues",
+                "source": "https://github.com/tonysm/rich-text-laravel/tree/3.2.1"
+            },
+            "time": "2024-10-31T15:28:52+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

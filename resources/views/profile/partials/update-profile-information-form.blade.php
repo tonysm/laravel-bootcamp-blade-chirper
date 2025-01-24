@@ -24,6 +24,12 @@
         </div>
 
         <div>
+            <x-input-label for="bio" :value="__('Bio')" class="mb-1" />
+            <x-trix-input toolbar="mini" id="bio" name="bio" class="block w-full" :value="old('bio', $user->bio?->toTrixHtml())" autocomplete="off" />
+            <x-input-error class="mt-2" :messages="$errors->get('bio')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
