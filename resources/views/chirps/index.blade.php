@@ -8,6 +8,7 @@
                 placeholder="{{ __('What\'s on your mind?') }}"
                 class="block w-full bg-white border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 :value="old('content')"
+                :accept-files="true"
             />
             <x-input-error :messages="$errors->get('content')" class="mt-2" />
             <x-primary-button class="mt-4">{{ __('Chirp') }}</x-primary-button>
