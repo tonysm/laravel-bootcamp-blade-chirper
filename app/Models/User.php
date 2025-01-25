@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Tonysm\RichTextLaravel\Attachables\AttachableContract;
 use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
-class User extends Authenticatable
+class User extends Authenticatable implements AttachableContract
 {
     use HasFactory, Notifiable;
     use HasRichText;
+    use User\Mentionee;
 
     /**
      * The dynamic rich text attributes.

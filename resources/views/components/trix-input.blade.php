@@ -1,4 +1,4 @@
-@props(['id', 'name', 'value' => '', 'toolbar' => null, 'acceptFiles' => false])
+@props(['id', 'name', 'value' => '', 'toolbar' => null, 'acceptFiles' => false, 'acceptMentions' => false])
 
 <input
     type="hidden"
@@ -20,6 +20,37 @@
     toolbar="{{ $id }}_toolbar"
     input="{{ $id }}_input"
     x-data="{
+        init() {
+            @if ($acceptMentions)
+            const tribute = new Tribute({
+                allowSpaces: true,
+                lookup: 'name',
+                values: this.fetchMentions.bind(this),
+            })
+            tribute.attach(this.$el)
+            tribute.range.pasteHtml = this.pasteHtmlOnTribute.bind(this)
+            @endif
+        },
+        fetchMentions(text, callback) {
+            fetch(`/mentions?search=${text}`)
+                .then(resp => resp.json())
+                .then(users => callback(users))
+                .catch(() => callback([]))
+        },
+        pasteHtmlOnTribute(html, startPosition, endPosition) {
+            let range = this.$el.editor.getSelectedRange()
+            let position = range[0]
+            let length = endPosition - startPosition
+            this.$el.editor.setSelectedRange([position - length, position])
+            this.$el.editor.deleteInDirection('backward')
+        },
+        addMention({ detail: { item: { original }}}) {
+            this.$el.editor.insertAttachment(new Trix.Attachment({
+                ...original,
+                content: original.content.trim()
+            }))
+            this.$el.editor.insertString(' ')
+        },
         uploadAttachment(event) {
             if (! event.attachment?.file) return
 
@@ -46,6 +77,9 @@
     @else
     x-on:trix-file-accept.prevent
     x-on:trix-attachment-add="$event.attachment.file && $event.attachment.remove()"
+    @endif
+    @if ($acceptMentions)
+    x-on:tribute-replaced="addMention"
     @endif
     {{ $attributes->merge(['class' => 'trix-content border-gray-300 dark:bg-gray-900 dark:border-gray-700 dark:!text-white focus:ring-1 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) }}
 ></trix-editor>

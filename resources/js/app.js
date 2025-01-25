@@ -1,7 +1,11 @@
 import "./libs/trix";
-import './bootstrap';
+import "./bootstrap";
 
-import Alpine from 'alpinejs';
+import "tributejs/dist/tribute.css";
+import Tribute from "tributejs";
+window.Tribute = Tribute;
+
+import Alpine from "alpinejs";
 
 window.Alpine = Alpine;
 
