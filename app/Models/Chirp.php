@@ -11,6 +11,7 @@ class Chirp extends Model
 {
     use HasFactory;
     use HasRichText;
+    use Chirp\Mentions;
 
     protected $richTextAttributes = [
         'content',
